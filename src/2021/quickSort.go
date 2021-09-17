@@ -20,7 +20,7 @@ func quickSort(nums []int, left, right int) {
 	l,r := left,right
 	pivot := nums[l]
 	for l <r {
-		for l < r&& nums[r] >= pivot{
+		for l < r&& nums[r] <= pivot{
 			r--
 		}
 
@@ -29,7 +29,7 @@ func quickSort(nums []int, left, right int) {
 			l++
 		}
 
-		for l < r && nums[l] <= pivot {
+		for l < r && nums[l] >= pivot {
 			l++
 		}
 
